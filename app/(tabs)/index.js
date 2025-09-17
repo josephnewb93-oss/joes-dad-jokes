@@ -47,7 +47,7 @@ export default function DadJokesScreen() {
       <View style={styles.container}>
         <Text style={styles.mainTitle}>Joe's Dad Jokes</Text>
         <Image source={laughingAnimal} style={styles.laughImage} />
-        <Text style={styles.jokeText}>{joke || 'Press the button for a joke!'}</Text>
+        <Text style={styles.jokeText}>{joke || "Press the button for a joke!"}</Text>
 
         <TouchableOpacity style={styles.bigButton} onPress={getJoke}>
           <Text style={styles.bigButtonText}>Get a Dad Joke</Text>
