@@ -50,3 +50,5 @@ node_modules/
 
 # Build outputs
 web-build/
+
+app/(tabs)/
