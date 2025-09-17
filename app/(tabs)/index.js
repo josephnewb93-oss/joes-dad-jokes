@@ -1,4 +1,5 @@
 // app/(tabs)/index.js
+/* eslint-disable react/no-unescaped-entities */
 import { useContext, useState } from 'react';
 import { Alert, Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import laughingAnimal from '../../assets/laughing-animal.png';
@@ -45,9 +46,8 @@ export default function DadJokesScreen() {
   return (
     <View style={styles.page}>
       <View style={styles.container}>
-        <Text style={styles.mainTitle}>Joe's Dad Jokes</Text>
+        <Text style={styles.mainTitle}>Joe&apos;s Dad Jokes</Text>
         <Image source={laughingAnimal} style={styles.laughImage} />
-        {/* Fixed the apostrophe by using double quotes */}
         <Text style={styles.jokeText}>{joke || "Press the button for a joke!"}</Text>
 
         <TouchableOpacity style={styles.bigButton} onPress={getJoke}>
