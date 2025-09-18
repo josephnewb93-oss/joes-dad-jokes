@@ -1,11 +1,22 @@
 // app/_layout.tsx
 import { Stack } from 'expo-router';
+import React, { ReactNode } from 'react';
 import { FavoritesProvider } from './tabs/FavoritesContext';
 
-export default function RootLayout() {
+interface RootLayoutProps {
+  children?: ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <FavoritesProvider>
-      <Stack screenOptions={{ headerShown: false }} />
+      <Stack
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        {children}
+      </Stack>
     </FavoritesProvider>
   );
 }
