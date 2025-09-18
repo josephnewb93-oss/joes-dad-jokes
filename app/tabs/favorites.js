@@ -1,4 +1,3 @@
-// app/(tabs)/favorites.js
 import { useContext } from 'react';
 import { Alert, FlatList, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { FavoritesContext } from './FavoritesContext';
@@ -8,6 +7,7 @@ export default function FavoritesScreen() {
 
   const speakJoke = (joke) => {
     if (!joke) return;
+
     if (Platform.OS === 'web' && window.speechSynthesis) {
       const utterance = new SpeechSynthesisUtterance(joke);
       utterance.rate = 0.85;
@@ -71,7 +71,7 @@ export default function FavoritesScreen() {
 }
 
 const styles = StyleSheet.create({
-  page: { flex: 1, minHeight: '100vh', justifyContent: 'center', alignItems: 'center', padding: 20, backgroundColor: '#fff' },
+  page: { flex: 1, justifyContent: 'center', alignItems: 'center', padding: 20, backgroundColor: '#fff' },
   container: { maxWidth: 600, width: '100%', alignItems: 'center' },
   title: { fontSize: 28, fontWeight: 'bold', marginBottom: 20, textAlign: 'center' },
   emptyText: { fontSize: 18, textAlign: 'center', color: '#aaa', marginTop: 20 },

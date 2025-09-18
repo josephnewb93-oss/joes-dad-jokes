@@ -1,33 +1,11 @@
-// app/(tabs)/_layout.js
-import { Ionicons } from '@expo/vector-icons';
-import { Tabs } from 'expo-router';
+import { Stack } from 'expo-router';
+import { FavoritesProvider } from './tabs/FavoritesContext';
 
-export default function TabsLayout() {
+export default function RootLayout() {
   return (
-    <Tabs
-      screenOptions={{
-        headerShown: false,
-        tabBarActiveTintColor: '#e91e63',
-      }}
-    >
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: "Dad Jokes 😂",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="happy-outline" color={color} size={size} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="favorites"
-        options={{
-          title: "Favorites ❤️",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="heart" color={color} size={size} />
-          ),
-        }}
-      />
-    </Tabs>
+    <FavoritesProvider>
+      <Stack screenOptions={{ headerShown: false }} />
+    </FavoritesProvider>
   );
 }
+
