@@ -3,22 +3,23 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "expo start",
-    "build": "expo prebuild && next build",
-    "vercel-build": "npm run build",
-    "start": "next start",
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "vercel-build": "next build",
     "lint": "expo lint"
   },
   "dependencies": {
-    "expo": "^54.0.7",
-    "expo-router": "^6.0.4",
-    "expo-speech": "^11.2.0",
+    "expo": "^54.0.8",
+    "expo-router": "^6.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-native": "0.72.3",
-    "react-native-web": "0.19.20"
+    "react-native": "0.71.8",
+    "react-native-web": "0.19.8"
   },
   "devDependencies": {
-    "eslint-config-next": "^15.5.3"
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4"
   }
 }
