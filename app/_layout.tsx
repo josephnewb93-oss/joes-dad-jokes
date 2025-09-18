@@ -1,6 +1,6 @@
 // app/_layout.tsx
 import { Stack } from 'expo-router';
-import { FavoritesProvider } from './(tabs)/FavoritesContext';
+import { FavoritesProvider } from './tabs/FavoritesContext';
 
 export default function RootLayout() {
   return (
